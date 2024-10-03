@@ -21,13 +21,13 @@ const bookingSchema = new Schema({
 
     seatNumber : {
         type: Number,
-        unique: true,
+        // unique: true,
         // required: true
     },
 
     email : {
-        type: Number,
-        unique: true,
+        type: String,
+        // unique: true,
         // required: true
     },
 });

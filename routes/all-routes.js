@@ -1,11 +1,13 @@
 import { Router } from "express"
-import { getAllBookings, getOneBooking, deleteBookings, addAllBookings} from '../controllers/booking-controllers.js';
+import { getAllBookings, postBookings, getOneBooking, deleteBookings} from '../controllers/booking-controllers.js';
 
 export const bookingRouter = Router();
 
 bookingRouter.get('/bookings', getAllBookings);
 
-bookingRouter.post('/bookings', addAllBookings);
+// bookingRouter.post('/bookings', addAllBookings);
+
+bookingRouter.post('/bookings', postBookings);
 
 bookingRouter.get('/bookings', getOneBooking);
 

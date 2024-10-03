@@ -8,16 +8,9 @@ export const getOneBooking = (req, res) => {
     res.status(200).json('This is one booking');
 }
 
-export const addAllBookings = async (req, res, next) => {
-    try {
-        console.log(req.body);
-        await BookingModel.create(req.body);
-        res.status(201).json('All Booking');
-    } catch (error) {
-        next(error);
-        
-    }
-}
+// export const addAllBookings = (req,res) => {
+//     res.status(200).json('All Booking');
+// }
 
 export const postBookings = async (req, res) => {
     const newBooking = new booking(req.body)
